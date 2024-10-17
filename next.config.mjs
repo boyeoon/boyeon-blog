@@ -1,10 +1,16 @@
-import withMDX from "@next/mdx";
+import nextMDX from '@next/mdx';
 
-/** @type {import('next').NextConfig} */
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
 const nextConfig = {
-  // Configure `pageExtensions` to include MDX files
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  // Optionally, add any other Next.js config below
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  reactStrictMode: true,
 };
 
 export default withMDX(nextConfig);

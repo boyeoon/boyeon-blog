@@ -25,7 +25,7 @@ export default function RootLayout({
       >
         {children}
       </body> */}
-      <body>{children}</body>
+      <body className="prose dark:prose-invert">{children}</body>
     </html>
   );
 }

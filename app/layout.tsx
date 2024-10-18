@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import React from "react";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
+})
 
 export const metadata: Metadata = {
   title: "boyeon-blog",
@@ -19,13 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      {/* <body
-        className={`${geistSans.variable} antialiased`}
-      >
-        {children}
-      </body> */}
-      <body className="prose dark:prose-invert">{children}</body>
+    <html lang="en" className={`${jetbrains_mono.variable}`}>
+      <body className="prose dark:prose-invert font-jetbrains">{children}</body>
     </html>
   );
 }

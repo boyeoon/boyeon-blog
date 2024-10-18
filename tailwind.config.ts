@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        jetbrains: ['var(--font-jetbrains-mono)'],
+      },
     },
   },
   plugins: [

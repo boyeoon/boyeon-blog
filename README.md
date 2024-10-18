@@ -1,6 +1,6 @@
 # boyeon-blog
 
-주소: [boyeon-blog](boyeon-blog.vercel.app).
+주소: [boyeon-blog](https://boyeon-blog.vercel.app).
 
 ## 폴더 구조
 ```

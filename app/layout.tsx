@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jetbrains_mono.variable}`}>
-      <body className="prose dark:prose-invert font-jetbrains">{children}</body>
+      <body className="prose dark:prose-invert dark:bg-slate-900 font-jetbrains">{children}</body>
     </html>
   );
 }

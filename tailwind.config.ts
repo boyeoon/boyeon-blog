@@ -15,10 +15,44 @@ const config: Config = {
       fontFamily: {
         jetbrains: ['var(--font-jetbrains-mono)'],
       },
+      typography: (theme: (key: string) => string) => ({
+        DEFAULT: {
+          css: {
+            headings: {},
+            lead: {}, // [class~="lead"]
+            h1: {},
+            h2: {},
+            h3: {},
+            h4: {},
+            p: {},
+            a: {},
+            blockquote: {},
+            figure: {},
+            figcaption: {},
+            strong: {},
+            em: {},
+            kbd: {},
+            code: {},
+            pre: {},
+            ol: {},
+            ul: {},
+            li: {},
+            table: {},
+            thead: {},
+            tr: {},
+            th: {},
+            td: {},
+            img: {},
+            video: {},
+            hr: {},
+          },        
+        },
+      }),
     },
   },
   plugins: [
     require("@tailwindcss/typography"),
   ],
 };
+
 export default config;

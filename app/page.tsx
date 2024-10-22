@@ -2,7 +2,6 @@ import { categories } from "@/categories";
 import { Pagination } from "@/components/pagination";
 import { Posts } from "@/components/posts";
 import { getPaginatedPosts, postsPerPage } from "@/posts";
-import DarkMode from "@/components/darkmode";
 
 import React from "react";
 
@@ -10,7 +9,7 @@ export default async function Home() {
   const { posts, total } = await getPaginatedPosts({ page: 1, limit: postsPerPage });
 
   return (
-    <main className="max-w-3xl px-4 mx-auto">
+    <main className="p-16">
       <h1>Boyeon Jang</h1>
       <Posts posts={posts} />
 
@@ -24,7 +23,6 @@ export default async function Home() {
           </li>
         ))}
       </ul>
-      <DarkMode />
     </main>
   );
 }

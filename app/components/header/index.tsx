@@ -6,16 +6,16 @@ export default function Header() {
     <header>
       <nav className="flex items-center justify-between font-bold gap-x-4">
         <div className="flex gap-x-4">
-          <Link className="p-1 no-underline rounded hover:bg-slate-400" href="/">
+          <Link href="/">
             Home
           </Link>
-          <Link className="p-1 no-underline rounded hover:bg-slate-400" href="/blog">
+          <Link href="/blog">
             Blog
           </Link>
-          <Link className="p-1 no-underline rounded hover:bg-slate-400" href="/project">
+          <Link href="/project">
             Projects
           </Link>
-          <Link className="p-1 no-underline rounded hover:bg-slate-400" href="/resume">
+          <Link href="/resume">
             Resume
           </Link>
         </div>

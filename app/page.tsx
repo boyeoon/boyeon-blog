@@ -1,4 +1,3 @@
-import { categories } from "@/categories";
 import { Pagination } from "@/components/pagination";
 import { Posts } from "@/components/posts";
 import { getPaginatedPosts, postsPerPage } from "@/posts";
@@ -14,15 +13,6 @@ export default async function Home() {
       <Posts posts={posts} />
 
       <Pagination baseUrl="/page" page={1} perPage={postsPerPage} total={total} />
-
-      <h2>Categories</h2>
-      <ul>
-        {categories.map((cat) => (
-          <li key={cat}>
-            <a href={`category/${cat}`}>{cat}</a>
-          </li>
-        ))}
-      </ul>
     </main>
   );
 }

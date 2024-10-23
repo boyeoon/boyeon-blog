@@ -1,3 +1,3 @@
-export const categories = ["dog", "cat", "rock"] as const;
+export const categories = ["Blog", "Project", "Resume"] as const;
 
 export type Category = typeof categories[number];

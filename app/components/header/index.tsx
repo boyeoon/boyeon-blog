@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { categories } from "@/categories";
 import DarkMode from "@/components/darkmode";
 
 export default function Header() {
@@ -9,15 +10,11 @@ export default function Header() {
           <Link href="/">
             Home
           </Link>
-          <Link href="/blog">
-            Blog
-          </Link>
-          <Link href="/project">
-            Projects
-          </Link>
-          <Link href="/resume">
-            Resume
-          </Link>
+          {categories.map((cat) => (
+            <Link key={cat} href={`/category/${cat}`}>
+              {cat}
+            </Link>
+          ))}
         </div>
         <DarkMode />
       </nav>

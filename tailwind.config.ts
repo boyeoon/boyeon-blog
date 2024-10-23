@@ -6,7 +6,15 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "selector",
   theme: {
+    screens: {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px",
+    },    
     extend: {
       colors: {
         background: "var(--background)",
@@ -18,14 +26,25 @@ const config: Config = {
       typography: (theme: (key: string) => string) => ({
         DEFAULT: {
           css: {
-            headings: {},
+            headings: {}, // h1, h2, h3, h4, th
             lead: {}, // [class~="lead"]
-            h1: {},
+            h1: {
+              fontSize: "4rem",
+              fontWeight: "900",
+              letterSpacing: theme("letterSpacing.tight"),
+            },
             h2: {},
             h3: {},
             h4: {},
             p: {},
-            a: {},
+            a: {
+              padding: "0.25rem",
+              borderRadius: "0.25rem",
+              textDecoration: "none",
+              "&:hover": {
+                backgroundColor: theme("colors.slate.400"), 
+              },
+            },
             blockquote: {},
             figure: {},
             figcaption: {},
@@ -48,6 +67,11 @@ const config: Config = {
           },        
         },
       }),
+      letterSpacing: {
+        tight: "-0.3rem",
+        normal: "0rem",
+        wide: "0.3rem",
+      },
     },
   },
   plugins: [

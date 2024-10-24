@@ -36,9 +36,13 @@ const config: Config = {
               // letterSpacing: theme("letterSpacing.tight"),
             },
             h2: {
+              fontSize: "2rem",
+              fontWeight: "600",
               fontFamily: theme("fontFamily.bricolage"),
             },
             h3: {
+              fontSize: "1.5rem",
+              fontWeight: "600",
               fontFamily: theme("fontFamily.bricolage"),
             },
             h4: {

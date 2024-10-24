@@ -13,8 +13,8 @@ export default async function Page({
 }: {
   params: { category: Category; page: number };
 }) {
-  let { category, page } = params;
-  page = Number(page);
+  const { category, page: pageParam } = params;
+  const page = Number(pageParam);
 
   if (page < 1) notFound();
 

@@ -75,7 +75,7 @@ const config: Config = {
             td: {},
             img: {
               width: "56rem",
-              height: "30rem",
+              // height: "30rem",
               objectFit: "cover",
             },
             video: {},

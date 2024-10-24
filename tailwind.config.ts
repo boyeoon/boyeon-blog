@@ -69,7 +69,11 @@ const config: Config = {
             tr: {},
             th: {},
             td: {},
-            img: {},
+            img: {
+              width: "56rem",
+              height: "30rem",
+              objectFit: "cover",
+            },
             video: {},
             hr: {},
           },        

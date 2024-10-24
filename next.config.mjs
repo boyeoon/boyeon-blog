@@ -1,15 +1,15 @@
-import nextMDX from '@next/mdx';
+import nextMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
 
 const withMDX = nextMDX({
-  extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [],
+    remarkPlugins: [remarkGfm],
     rehypePlugins: [],
   },
 });
 
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactStrictMode: true,
 };
 

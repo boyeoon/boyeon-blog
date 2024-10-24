@@ -6,6 +6,9 @@ import {
   postsPerPage,
 } from "@/posts";
 import { notFound } from "next/navigation";
+import Blog from "@/components/categorys/blog";
+import Project from "@/components/categorys/project"
+import Resume from "@/components/categorys/resume"
 
 export default async function Category({
   params,
@@ -25,7 +28,12 @@ export default async function Category({
 
   return (
     <main>
-      <h1>Category: {category}</h1>
+      {/* <h1>Category: {category}</h1> */}
+
+      {category === "Blog" && <Blog />}
+      {category === "Project" && <Project />}
+      {category === "Resume" && <Resume />}
+
       <Posts posts={posts} />
 
       <Pagination

@@ -21,7 +21,8 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        jetbrains: ['var(--font-jetbrains-mono)'],
+        bricolage: ["var(--font-bricolage-grotesque)"],
+        jetbrains: ["var(--font-jetbrains-mono)"],
       },
       typography: (theme: (key: string) => string) => ({
         DEFAULT: {
@@ -31,11 +32,18 @@ const config: Config = {
             h1: {
               fontSize: "4rem",
               fontWeight: "900",
-              letterSpacing: theme("letterSpacing.tight"),
+              fontFamily: theme("fontFamily.bricolage"),
+              // letterSpacing: theme("letterSpacing.tight"),
             },
-            h2: {},
-            h3: {},
-            h4: {},
+            h2: {
+              fontFamily: theme("fontFamily.bricolage"),
+            },
+            h3: {
+              fontFamily: theme("fontFamily.bricolage"),
+            },
+            h4: {
+              fontFamily: theme("fontFamily.bricolage"),
+            },
             p: {},
             a: {
               padding: "0.25rem",

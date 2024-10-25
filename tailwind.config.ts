@@ -55,6 +55,7 @@ const config: Config = {
               textDecoration: "none",
               "&:hover": {
                 backgroundColor: theme("colors.slate.400"), 
+                textDecoration: "underline wavy",
               },
             },
             blockquote: {},

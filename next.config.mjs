@@ -11,6 +11,9 @@ const withMDX = nextMDX({
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactStrictMode: true,
+  images: {
+    domains: ["i.imgur.com"],
+  },
 };
 
 export default withMDX(nextConfig);

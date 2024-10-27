@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectData {
   name: string;
@@ -40,7 +41,6 @@ export default function Project() {
     <main className="p-8">
       <div>
         <h2>Side Projects</h2>
-        <h3>sdsdsd</h3>
         <table className="table-auto">
           <thead>
             <tr>
@@ -58,8 +58,15 @@ export default function Project() {
       </div>
 
       <div>
-        <h2>Team Projects</h2>
-        <p>Here you can find all my projects, showcasing my skills and creativity.</p>
+        <h3>Snap Frame</h3>
+        <Image src={"https://i.imgur.com/Pszkoy2.png"} alt="snap-frame" width={500} height={500} />
+        <p>This project is a web application that allows users to take photos using their webcam and download them. Users can activate the camera, select each frame, strike a pose, and capture their photos. After capturing, they can download all the selected frames.</p>
+      </div>
+
+      <div>
+        <h3>I Love Sudoku</h3>
+        <Image src={"https://i.imgur.com/izazpAU.png"} alt="i-love-sudoku" width={500} height={500} />
+        <p>This app is a side project that implements a Sudoku game, designed to provide an engaging experience for users of all skill levels. It helps users solve Sudoku puzzles and discover solutions.</p>
       </div>
     </main>
   );

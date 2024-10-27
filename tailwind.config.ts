@@ -52,10 +52,15 @@ const config: Config = {
             a: {
               padding: "0.25rem",
               borderRadius: "0.25rem",
-              textDecoration: "none",
+              // textDecoration: "none",
+              textDecorationColor: theme("colors.indigo.500"), 
+              textDecorationThickness: "2px",
+              textUnderlineOffset: "2px",
               "&:hover": {
                 backgroundColor: theme("colors.slate.400"), 
                 textDecoration: "underline wavy",
+                textDecorationColor: theme("colors.indigo.500"),
+                textDecorationThickness: "2px", 
               },
             },
             blockquote: {},

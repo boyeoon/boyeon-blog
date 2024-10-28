@@ -70,7 +70,9 @@ const config: Config = {
             em: {},
             kbd: {},
             code: {},
-            pre: {},
+            pre: {
+              overflowX: "auto"
+            },
             ol: {},
             ul: {},
             li: {},

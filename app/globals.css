@@ -36,3 +36,44 @@ body {
 .repo .material-symbols-outlined {
   font-size: 1rem;
 }
+
+/* rehype-prism-plus */
+.code-highlight {
+  float: left;
+  min-width: 100%;
+}
+
+.code-line {
+  display: block;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+  margin-left: -1rem; /* -16px */
+  margin-right: -1rem; /* -16px */
+  border-left: 4px solid transparent;
+}
+
+.code-line.inserted {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.code-line.deleted {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.highlight-line {
+  margin-left: -1rem; /* -16px */
+  margin-right: -1rem; /* -16px */
+  background-color: rgba(55, 65, 81, 0.5);
+  border-left: 4px solid rgb(96, 165, 250);
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 1rem; /* 16px */
+  margin-left: -0.5rem; /* -8px */
+  color: rgba(156, 163, 175, 1); /* rgb(156, 163, 175) */
+  content: attr(line);
+}
+/* rehype-prism-plus */

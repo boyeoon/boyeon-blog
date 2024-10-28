@@ -1,133 +1,136 @@
-/*
- * Laserwave Theme originally by Jared Jones for Visual Studio Code
- * https://github.com/Jaredk3nt/laserwave
- *
- * Ported for PrismJS by Simon Jespersen [https://github.com/simjes]
+/**
+ * Tailwind Moon
+ * Theme originally by luciascarlet for Visual Studio Code
+  https://github.com/luciascarlet/tailwind-moon-vscode
+ * Ported for PrismJS by Boyeon Jang [https://github.com/boyeoon]
  */
 
- code[class*="language-"],
- pre[class*="language-"] {
-   background: #27212e;
-   color: #ffffff;
-   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; /* this is the default */
-   /* The following properties are standard, please leave them as they are */
-   font-size: 1em;
-   direction: ltr;
-   text-align: left;
-   white-space: pre;
-   word-spacing: normal;
-   word-break: normal;
-   line-height: 1.5;
-   -moz-tab-size: 2;
-   -o-tab-size: 2;
-   tab-size: 2;
-   /* The following properties are also standard */
-   -webkit-hyphens: none;
-   -moz-hyphens: none;
-   -ms-hyphens: none;
-   hyphens: none;
- }
- 
- code[class*="language-"]::-moz-selection,
- code[class*="language-"] ::-moz-selection,
- pre[class*="language-"]::-moz-selection,
- pre[class*="language-"] ::-moz-selection {
-   background: #eb64b927;
-   color: inherit;
- }
- 
- code[class*="language-"]::selection,
- code[class*="language-"] ::selection,
- pre[class*="language-"]::selection,
- pre[class*="language-"] ::selection {
-   background: #eb64b927;
-   color: inherit;
- }
- 
- /* Properties specific to code blocks */
- pre[class*="language-"] {
-   padding: 1em; /* this is standard */
-   margin: 0.5em 0; /* this is the default */
-   overflow: auto; /* this is standard */
-   border-radius: 0.5em;
- }
- 
- /* Properties specific to inline code */
- :not(pre) > code[class*="language-"] {
-   padding: 0.2em 0.3em;
-   border-radius: 0.5rem;
-   white-space: normal; /* this is standard */
- }
- 
- .token.comment,
- .token.prolog,
- .token.cdata {
-   color: #91889b;
- }
- 
- .token.punctuation {
-   color: #7b6995;
- }
- 
- .token.builtin,
- .token.constant,
- .token.boolean {
-   color: #ffe261;
- }
- 
- .token.number {
-   color: #b381c5;
- }
- 
- .token.important,
- .token.atrule,
- .token.property,
- .token.keyword {
-   color: #40b4c4;
- }
- 
- .token.doctype,
- .token.operator,
- .token.inserted,
- .token.tag,
- .token.class-name,
- .token.symbol {
-   color: #74dfc4;
- }
- 
- .token.attr-name,
- .token.function,
- .token.deleted,
- .token.selector {
-   color: #eb64b9;
- }
- 
- .token.attr-value,
- .token.regex,
- .token.char,
- .token.string {
-   color: #b4dce7;
- }
- 
- .token.entity,
- .token.url,
- .token.variable {
-   color: #ffffff;
- }
- 
- /* The following rules are pretty similar across themes, but feel free to adjust them */
- .token.bold {
-   font-weight: bold;
- }
- 
- .token.italic {
-   font-style: italic;
- }
- 
- .token.entity {
-   cursor: help;
- }
- 
- .token.namespace {
-   opacity: 0.7;
- }
+code[class*="language-"],
+pre[class*="language-"] {
+    background: #1E293C;
+    color: #E2E8F0;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* this is the default */
+    /* The following properties are standard, please leave them as they are */
+    font-size: 1em;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    /* The default is 4, but you could change it if you really, really want to */
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    /* The following properties are also standard */
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Optional: What the code looks like when highlighted */
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection {
+    background: #1e293c27;
+    color: inherit;
+}
+
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection,
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection {
+    background: #1e293c27;
+    color: inherit;
+}
+
+/* Properties specific to code blocks */
+pre[class*="language-"] {
+    padding: 1em; /* this is standard */
+    margin: 0.5em 0; /* this is the default */
+    overflow: auto; /* this is standard */
+    border-radius: 0.75rem;
+}
+
+/* Properties specific to inline code */
+:not(pre) > code[class*="language-"] {
+    padding: 0.1em; /* this is the default */
+    border-radius: 0.75rem;
+    white-space: normal; /* this is standard */
+}
+
+/**
+* These are the minimum tokens you must style, you can rearrange them and/or style more tokens as you want
+* The concepts behind these standard tokens, as well as some examples, can be found here: https://prismjs.com/tokens.html
+*/
+.token.comment {
+    color: #94A3B8;
+}
+
+.token.prolog,
+.token.important {
+    color: #F472B6;
+}
+
+.token.cdata,
+.token.string,
+.token.char,
+.token.inserted,
+.token.url {
+    color: #34D399;
+}
+
+.token.doctype,
+.token.atrule,
+.token.keyword,
+.token.symbol,
+.token.operator {
+    color: #A78BFA;
+}
+
+.token.punctuation,
+.token.property,
+.token.variable {
+    color: #E2E8F0;
+}
+
+.token.entity,
+.token.class-name,
+.token.boolean,
+.token.constant,
+.token.number,
+.token.tag,
+.token.builtin,
+.token.regex {
+    color: #60A5FA;
+}
+
+.token.attr-name,
+.token.selector,
+.token.attr-value,
+.token.function {
+    color: #67E8F9;
+}
+
+.token.deleted {
+    color: #E53E3E;
+}
+
+/* The following rules are pretty similar across themes, but feel free to adjust them */
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.namespace {
+    opacity: 0.7;
+}

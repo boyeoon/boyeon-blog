@@ -9,7 +9,13 @@ interface ProjectData {
   repoPath: string;
 }
 
-function ProjectRow({ name, description, namePath, repo, repoPath }: ProjectData) {
+function ProjectRow({
+  name,
+  description,
+  namePath,
+  repo,
+  repoPath,
+}: ProjectData) {
   return (
     <tr>
       <td className="w-44">
@@ -17,7 +23,9 @@ function ProjectRow({ name, description, namePath, repo, repoPath }: ProjectData
       </td>
       <td>{description}</td>
       <td className="repo">
-        <Link className="material-symbols-outlined" href={repoPath}>{repo}</Link>
+        <Link className="material-symbols-outlined" href={repoPath}>
+          {repo}
+        </Link>
       </td>
     </tr>
   );
@@ -25,15 +33,36 @@ function ProjectRow({ name, description, namePath, repo, repoPath }: ProjectData
 
 export default function Project() {
   const data: ProjectData[] = [
-    { name: "Snap Frame",
-      description: "A web application that allows users to take and download photos using their webcam.",
-      namePath: "https://snap-frame.vercel.app/",
-      repo: "open_in_new", repoPath: "https://github.com/boyeoon/snap-frame"
+    {
+      name: "All Pokémon Names",
+      description:
+        "It's a game to guess the names of Pokémon from each region.",
+      namePath: "https://all-pokemon-names.vercel.app/",
+      repo: "open_in_new",
+      repoPath: "https://github.com/boyeoon/all-pokemon-names",
     },
-    { name: "I Love Sudoku",
-      description: "A game that implements Sudoku for users of all skill levels.",
+    {
+      name: "Snap Frame",
+      description:
+        "A web application that allows users to take and download photos using their webcam.",
+      namePath: "https://snap-frame.vercel.app/",
+      repo: "open_in_new",
+      repoPath: "https://github.com/boyeoon/snap-frame",
+    },
+    {
+      name: "I Love Sudoku",
+      description:
+        "A game that implements Sudoku for users of all skill levels.",
       namePath: "https://i-love-sudoku.vercel.app/",
-      repo: "open_in_new", repoPath: "https://github.com/boyeoon/i-love-sudoku"
+      repo: "open_in_new",
+      repoPath: "https://github.com/boyeoon/i-love-sudoku",
+    },
+    {
+      name: "Boyeoon",
+      description: "It's a personal portfolio and tech blog site.",
+      namePath: "https://boyeoon.vercel.app/",
+      repo: "open_in_new",
+      repoPath: "https://github.com/boyeoon/boyeon-blog",
     },
   ];
 
@@ -57,16 +86,61 @@ export default function Project() {
         </table>
       </div>
 
-      <div>
-        <h3>Snap Frame</h3>
-        <Image src={"https://i.imgur.com/Pszkoy2.png"} alt="snap-frame" width={500} height={500} />
-        <p>This project is a web application that allows users to take photos using their webcam and download them. Users can activate the camera, select each frame, strike a pose, and capture their photos. After capturing, they can download all the selected frames.</p>
+      <hr />
+
+      <div className="pt-4 pb-16">
+        <div className="relative border-2 rounded-md shadow-2xl border-slate-500 dark:shadow-slate-950">
+          <h3 className="absolute top-[-3.8rem] left-[1rem] bg-white dark:bg-slate-900 px-2">
+            All Pokémon Names
+          </h3>
+          <div className="p-6">
+            Do you know all the Pokémon from the Kanto region (1st generation),
+            Johto region (2nd generation), Hoenn region (3rd generation), and
+            beyond? This interactive quiz application allows you to test your
+            knowledge of Pokémon. Your goal is to guess the names of the Pokémon
+            based on their Pokédex numbers. For users who want to enjoy hard
+            mode, there is a feature to display or hide the Pokédex numbers.
+          </div>
+        </div>
       </div>
 
-      <div>
-        <h3>I Love Sudoku</h3>
-        <Image src={"https://i.imgur.com/izazpAU.png"} alt="i-love-sudoku" width={500} height={500} />
-        <p>This app is a side project that implements a Sudoku game, designed to provide an engaging experience for users of all skill levels. It helps users solve Sudoku puzzles and discover solutions.</p>
+      <div className="pt-4 pb-16">
+        <div className="relative border-2 rounded-md shadow-2xl border-slate-500 dark:shadow-slate-950">
+          <h3 className="absolute top-[-3.8rem] left-[1rem] bg-white dark:bg-slate-900 px-2">
+            Snap Frame
+          </h3>
+          {/* <Image
+          src={"https://i.imgur.com/Pszkoy2.png"}
+          alt="snap-frame"
+          width={500}
+          height={500}
+        /> */}
+          <div className="p-6">
+            This project is a web application that allows users to take photos
+            using their webcam and download them. Users can activate the camera,
+            select each frame, strike a pose, and capture their photos. After
+            capturing, they can download all the selected frames.
+          </div>
+        </div>
+      </div>
+
+      <div className="pt-4 pb-16">
+        <div className="relative border-2 rounded-md shadow-2xl border-slate-500 dark:shadow-slate-950">
+          <h3 className="absolute top-[-3.8rem] left-[1rem] bg-white dark:bg-slate-900 px-2">
+            I Love Sudoku
+          </h3>
+          {/* <Image
+          src={"https://i.imgur.com/izazpAU.png"}
+          alt="i-love-sudoku"
+          width={500}
+          height={500}
+        /> */}
+          <div className="p-6">
+            This app is a side project that implements a Sudoku game, designed
+            to provide an engaging experience for users of all skill levels. It
+            helps users solve Sudoku puzzles and discover solutions.
+          </div>
+        </div>
       </div>
     </main>
   );
